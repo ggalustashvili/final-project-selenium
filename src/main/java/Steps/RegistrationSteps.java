@@ -65,7 +65,7 @@ public class RegistrationSteps {
 
     public RegistrationSteps AcceptTerms(){
         RegistrationPage registrationPage = new RegistrationPage();
-        registrationPage.getAcceptCheckBox().click();
+        registrationPage.getAcceptCheckBox().shouldBe(Condition.visible).click();
     return  this;
     }
 

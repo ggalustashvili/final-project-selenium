@@ -28,7 +28,7 @@ public class RegistrationPage {
     private final SelenideElement namesurname = $("#lContactPersonName");
     private final SelenideElement identificationCode = $("#lContactPersonPersonalID");
     private final SelenideElement phoneNumber = $("#lContactPersonPhone");
-    private final SelenideElement AcceptCheckBox = $(By.xpath("/html/body/section[5]/div[1]/div/div[2]/div/div/div/div[1]/div[10]/div/input[1]"));
+    private final SelenideElement AcceptCheckBox = $(By.xpath("/html/body/section[5]/div[1]/div/div[2]/div/div/div/div[2]/div[2]/div[11]/div/input[1]"));
 
     private final SelenideElement legalInfoMassage = $("#legalInfoMassage");
 
@@ -40,7 +40,7 @@ public class RegistrationPage {
         return SubmitButton;
     }
 
-    private final SelenideElement SubmitButton = $(byXpath("/html/body/section[5]/div[1]/div/div[2]/div/div/div/div[1]/a/div/input"));
+    private final SelenideElement SubmitButton = $(byXpath("/html/body/section[5]/div[1]/div/div[2]/div/div/div/div[2]/div[2]/a/div/input"));
     public SelenideElement getLegalForm() {
         return legalForm;
     }
