@@ -4,6 +4,8 @@ import Pages.HolidayPage;
 import Pages.UserLoginPage;
 import com.codeborne.selenide.Condition;
 
+import java.util.concurrent.locks.AbstractQueuedSynchronizer;
+
 public class HolidaySteps {
 
     public HolidaySteps OpenPage() {
@@ -40,6 +42,13 @@ public class HolidaySteps {
         holidayPage.getSubmitButton().click();
 
         return this;
+    }
+
+    public  HolidaySteps OfferList(){
+        HolidayPage holidayPage = new HolidayPage();
+        holidayPage.getOfferList();
+        holidayPage.getOfferList().stream().forEach(e -> System.out.println(e));
+        return  this;
     }
 
 }

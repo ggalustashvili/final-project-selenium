@@ -78,7 +78,8 @@ public class UserLoginUiTest extends BaseTest {
         holidaySteps.OpenPage()
                 .NavigateToHolidayPage()
                 .SetHolidayPriceRange( 170 , 180 )
-                .FilterTheHolidays();
+                .FilterTheHolidays()
+                .OfferList();
     }
 
 
