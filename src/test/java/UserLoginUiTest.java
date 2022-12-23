@@ -4,8 +4,10 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 import Helpers.BaseTest;
 import Helpers.Constants;
+import Pages.HolidayPage;
 import Pages.RegistrationPage;
 import Pages.UserLoginPage;
+import Steps.HolidaySteps;
 import Steps.RegistrationSteps;
 import Steps.UserLoginSteps;
 import org.testng.annotations.Test;
@@ -67,5 +69,18 @@ public class UserLoginUiTest extends BaseTest {
         assertThat(registrationPage.getLegalInfoMassage().getText() ,equalTo("რეგისტრაციის დროს დაფიქსირდა შეცდომა!"));
 
     }
+
+    @Test(priority = 4)
+    public void Test4(){
+        HolidayPage holidayPage = new HolidayPage();
+        HolidaySteps holidaySteps = new HolidaySteps();
+
+        holidaySteps.OpenPage()
+                .NavigateToHolidayPage()
+                .SetHolidayPriceRange( 170 , 180 )
+                .FilterTheHolidays();
+    }
+
+
 
 }
